@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            popbox with html
+        </title>
+    </head>
+    <body>
+        <h1>Pop-box with HTML</h1>
+        <h3>Alert-box</h3><br>
+        <button id="bt1">Click here</button><br><br>
+        <h3>Confirm-box</h3><br>
+        <button id="bt2">Click here</button><br><br>
+        <h3>Prompt-box</h3><br>
+        <button id="bt3">Click here</button><br><br>
+        <h3>Prompt-box(Students)</h3><br>
+        <button id="bt4">Click here</button><br><br>
+        <script type="text/javascript">
+            document.getElementById("bt1").onclick=myfunction;
+            document.getElementById("bt2").onclick=myfunction1;
+            document.getElementById("bt3").onclick=myfunction2;
+            document.getElementById("bt4").onclick=myfunction3;
+            function myfunction(){
+                alert("hello world");
+            }
+            function myfunction1(){
+                var st=confirm("Is that you");
+                if(st==true)
+                    document.getElementById("abc").innerHTML="ok!, you are my Boss";
+                else
+                    document.getElementById("abc").innerHTML="No!,you are not my Boss,go away";
+            }
+            function myfunction2(){
+                var st=prompt("Enter your name","");
+                document.getElementById("abc").innerHTML=st;
+            }
+            document.write("List of the new student<br>");
+            function myfunction3(){
+                document.open();
+                var stu=new Array();
+                for(i=0;i<=3;i++)
+                    {
+                        var a=prompt("Enter the name");
+                        stu[i]=a;
+                    }
+                document.close();
+                for(var a in stu)
+                    document.write("The Student name: "+stu[a]+"<br>");
+            }
+        </script>
+        <p id="abc"></p>
+    </body>
+</html>

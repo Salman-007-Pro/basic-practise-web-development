@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin_admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="admin.css" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/admin/mlogo.png" />
+    </div>
+    <div id="main">
+       
+        <div id="mnu">
+            <table class="tbl">
+                <tr>
+                    <td class="tblhead">
+                        MENU</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="Button1" runat="server"  
+                           Text="Add Category" CssClass="mbtn"
+                            CausesValidation="False" PostBackUrl="~/admin/Addcategory.aspx" 
+                            onclick="Button1_Click" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="Button2" runat="server" CssClass="mbtn"
+                            Text="Add Item"  CausesValidation="False" 
+                            onclick="Button2_Click" PostBackUrl="~/admin/AddItem.aspx" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="Button3" runat="server" CssClass="mbtn"
+                            Text="Add Quantity" 
+                            CausesValidation="False" PostBackUrl="~/admin/AddQuantity.aspx" />
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <asp:Button ID="Button4" runat="server" CssClass="mbtn"
+                            Text="View Order"  
+                            CausesValidation="False" PostBackUrl="~/admin/VIEWORDER.aspx" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="Button5" runat="server" CssClass="mbtn"
+                            Text="View Payment"  
+                              CausesValidation="False" 
+                            PostBackUrl="~/admin/VIEWPAYMENT.aspx" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="Button6" runat="server" CssClass="mbtn"
+                            Text="Reports"  CausesValidation="False" 
+                            PostBackUrl="~/admin/REPORTS.aspx" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="Button7" runat="server" CssClass="mbtn"
+                            Text="FeedBack"  CausesValidation="False" 
+                            onclick="Button7_Click" PostBackUrl="~/admin/FEEDBACK.aspx" />
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <asp:Button ID="Button9" runat="server" CssClass="mbtn" 
+                            PostBackUrl="~/admin/Change Password.aspx" Text="Change Password" CausesValidation="False" 
+                             />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <asp:Button ID="Button8" runat="server" CssClass="mbtn"
+                            Text="Log Out"  CausesValidation="False" 
+                            PostBackUrl="~/admin/login.aspx" />
+
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    <div id="cnt"> 
+     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </div>
+    
+       </form>
+
+
+
+</body>
+</html>

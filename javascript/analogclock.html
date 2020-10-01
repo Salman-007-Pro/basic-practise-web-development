@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Analog Clock</title>
+        <style type="text/css">
+            body{
+                margin:0;
+                background-color: gray;
+            }
+            #container{
+                background-color:antiquewhite;
+                width:40%;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                overflow: hidden;
+            }
+            #hour{
+
+                //transform: translate(-50%,-50%);
+                fill:red;
+            }
+            #min{
+                fill:gray;
+            }
+            #sec{
+                stroke:pink;
+                stroke-width:1;
+            }
+            #circle{
+                fill:white;
+                stroke:blue;
+                stroke-width:3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <svg viewBox="0 0 100 100" id="co">
+            <circle cx="50" cy="50" r="46" id="circle"/>
+            <g>
+                <rect height="30" width="3" x="48" y="20" rx="3" id="hour"></rect>
+                <rect height="40" width="2" x="48" y="11" rx="3" id="min"></rect>
+                <line x1="48" y1="10" x2="48" y2="50" id="sec"></line>
+            </g>
+            </svg>
+        </div>
+        <button onclick="ab()" id="b">None</button>
+        <script type="text/javascript">
+            setInterval(abc,1000);
+            function change(ek,deg){
+                ek.setAttribute('transform','rotate('+deg+' 50 50)');
+            }
+            function abc(){
+                var today = new Date();
+                change(sec,6*today.getSeconds());
+                //change(min,6*today.getMinutes());
+                //change(hour,30*(today.getHours%12+today.getMinutes/2));
+            }
+            function ab(){
+                abc1(sec);
+            }
+            function abc1(el){
+                el.style.backgroundColor="red";
+            }
+        </script>
+    </body>
+</html>

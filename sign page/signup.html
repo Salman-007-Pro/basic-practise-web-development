@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Login/Logout page</title>
+        <linK href="css/bootstrap-grid.min.css" rel="stylesheet"/>
+        <linK href="css/bootstrap-reboot.css" rel="stylesheet"/>
+        
+        <!--<linK src="js/bootstrap.js"/>
+        <linK src="js/jquery.min.js"/>
+        <link src="js/bootstrap.bundle.min.js"/>-->
+        <linK href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+  
+    </head>
+    <body>
+        <div class="containers">
+            <div class="form-container">
+                <div class="form sign-in" id="A1">
+                    <form action="#">
+                        <div class="form-icon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </div>
+                        <div class="form-heading">
+                            <span class="main-heading">Welcome</span>
+                            <span class="sub-heading">Sign-in to your Account</span>
+                        </div>
+                        <div class="form-body">
+                            <div class="input-group">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <input type="text" id="sign-username" placeholder="Enter Username">
+                            </div>
+                            <div class="input-group">
+                                <i class="glyphicon glyphicon-lock"></i>
+                                <input type="password" id="sign-password" placeholder="Enter password">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                                <a href="#">Forget Password?</a>
+                                <button type="submit">Sign-In</button>
+                        </div>
+                        <div class="form-footer">
+                            <a href="#" class="trigger c">Sign-Up</a>
+                        </div>
+                    </form>
+                </div>
+                
+                
+               <div class="form sign-up" id="A2">
+                    <form action="#">
+                        <div class="form-icon a">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </div>
+                        <div class="form-heading a">
+                            <span class="main-heading">Hello Salman</span>
+                            <span class="sub-heading">Sign-in to your Account</span>
+                        </div>
+                        <div class="form-body">
+                            <div class="input-group a">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <input type="text" id="sign-username" class="a c" placeholder="Enter Email">
+                            </div>
+                            <div class="input-group">
+                                <i class="glyphicon glyphicon-lock"></i>
+                                <input type="password" id="sign-password" placeholder="Enter password">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                                <a href="#" class="a">Forget Password?</a>
+                                <button type="submit" class="b">Sign-In</button>
+                        </div>
+                        <div class="form-footer">
+                            <a href="#" class="a trigger">Sign-Up</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+    <!--Script Language-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        <script>
+           
+    $(document).ready(function(){
+    $(".sign-in .trigger").on('click',function(){
+        $('.sign-up').addClass('active-signup');
+        setTimeout(function(){
+            $('.sign-in').removeClass('active-signin');
+        },600);
+    });
+    
+    
+    $(".sign-up .trigger").on("click",function(){
+        $(".sign-in").addClass("active-signin");
+        setTimeout(function(){
+            $('.sign-up').removeClass('active-signup');
+            
+        },100);
+    });
+});
+        </script>
+    </body>
+</html>

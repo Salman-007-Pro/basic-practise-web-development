@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Function</title>
+    </head>
+    <body>
+        <span>Number no 1: <input id="no1" type="text"></span><br>
+        <span><select id="op">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select></span><br>
+        <span>Number no 2: <input id="no2"type="text"></span><br>
+        <span>Result: <input id="no3" type="text"></span><br>
+        <span><input type="button" value="result" onclick="mycal();"></span>
+        <br>
+        <script type="text/javascript">
+            function mycal(){
+                var a1=document.getElementById("no1").value;
+                var a2=document.getElementById("no2").value;
+                var b1=parseInt(a1);
+                var b2=parseInt(a2);
+                var a3=document.getElementById("op").value;
+                var b3;
+                if(a3=="+")
+                {
+                    b3=b1+b2;
+                }
+                else if(a3=="-")
+                {
+                    b3=b1-b2;
+                }
+                else if(a3=="*")
+                {
+                    b3=b1*b2;
+                }
+                else
+                {
+                     b3=b1/b2;
+                    b3=b3.toFixed(2);
+                }
+                document.getElementById("no3").value=b3;
+            }
+        </script>
+        
+    </body>
+</html>

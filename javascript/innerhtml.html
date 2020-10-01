@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+        InnerHtml
+        </title>
+        <style type="text/css">
+            #te{
+                resize: none;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="abc">My name is Muhammad Salman Asif</p>
+        <textarea rows="4" cols="50" id="te" placeholder="here to add the text"></textarea>
+        <button id="bt">Change to text</button>
+        <script type="text/javascript">
+            document.getElementById("bt").onclick=function(){
+                var val=document.getElementById("te").value;
+                if(val!="")
+                document.getElementById("abc").innerHTML=val;
+            }
+        </script>
+    </body>
+</html>

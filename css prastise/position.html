@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Position with css</title>
+        <style type="text/css">
+            body{
+                background-color: brown;
+            }
+            .container{
+                font-family:monospace;
+                background-color: antiquewhite;
+                position: relative;
+                height: 2200px;
+            }
+            h1{
+                text-align: center;
+            }
+            .box{
+                width: 150px;
+                height: 150px;
+                background-color: red;
+                text-align: center;
+                line-height: 150px;
+            }
+            #relative{
+                position:relative;
+                top:0;
+                right:0;
+            }
+            #absolute{
+                position:absolute;
+                right:200px;
+                top:90px;
+                
+            }
+            #fixed{
+                position:fixed;
+                top:0;
+                right:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>CSS Position</h1>
+            <h2>Relative</h2>
+            <div class="box" id="relative">Relative</div>
+            <h2>Abolute</h2>
+            <div class="box" id="absolute">Absolute</div>
+            <h2>Fixed</h2>
+            <div class="box" id="fixed">Fixed</div>
+        </div>
+    </body>
+</html>

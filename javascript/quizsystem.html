@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Quiz System made by Salman Asif</title>
+        <style type="text/css">
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: cadetblue;
+            }
+            #container{
+                position:absolute;
+                width: 50%;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                background-color: crimson;
+                border-radius: 50px;
+                text-align: justify;
+                height: auto;
+                box-shadow: 6px 8px 25px 2px black;
+                overflow: auto;
+            }
+            #hr{
+                border:none;
+                border-bottom: 3px dashed black;
+                
+            }
+            header{
+                text-align: center;
+            }
+            footer{
+                text-align: center;
+            }
+            #f{
+                padding-left: 40px;
+            }
+            #but{
+                border: none;
+                background-color: lightgreen;
+                border-radius: 5px;
+                font-size: 17px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                margin-right: 7%;
+                padding: 5px;
+                box-shadow: 2px 2px 5px 1px gray;
+                text-align: center;
+            }
+            #but:hover{
+                background-color: yellow; 
+            }
+            #result{
+                background-color: yellow;
+                text-align: center;
+                margin-left: 40px;
+                margin-right: 40px;
+                border-radius: 20px;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header id="h3">
+                <h1>The Quiz System</h1>
+            </header>
+            <hr id="hr">
+            <section>
+                <div id="result"></div>
+                    <form name="quiz" id="f" onsubmit="return abc()">
+                        <h3>1: Inside which Html element do we put the Javascript?</h3>
+                        <input type="radio" name="q1" value="a">a: &lt;Scripting&gt;
+                        <br>
+                        <input type="radio" name="q1" value="b">b: &lt;JavaScript&gt;
+                        <br>
+                        <input type="radio" name="q1" value="c">c: &lt;Js&gt;
+                        <br>
+                        <input type="radio" name="q1" value="d">d: &lt;Script&gt;
+                        <br>
+                        
+                         <h3>2: Which event occurs when the user clicks on an HTML element?</h3>
+                        <input type="radio" name="q2" value="a">a: onchange
+                        <br>
+                        <input type="radio" name="q2" value="b">b: onmouseclick
+                        <br>
+                        <input type="radio" name="q2" value="c">c: onmouseover
+                        <br>
+                        <input type="radio" name="q2" value="d">d: onclick
+                        <br>
+                        
+                         <h3>3: What does CSS stand for?</h3>
+                        <input type="radio" name="q3" value="a">a: Colorful Style Sheets
+                        <br>
+                        <input type="radio" name="q3" value="b">b: Cascading Style Sheets
+                        <br>
+                        <input type="radio" name="q3" value="c">c: Creative Style Sheets
+                        <br>
+                        <input type="radio" name="q3" value="d">d: Computer Style Sheets
+                        <br>
+                        
+                         <h3>4: How do you select an element with id "demo"?</h3>
+                        <input type="radio" name="q4" value="a">a: #demo
+                        <br>
+                        <input type="radio" name="q4" value="b">b: .demo
+                        <br>
+                        <input type="radio" name="q4" value="c">c: *demo
+                        <br>
+                        <input type="radio" name="q4" value="d">d: demo:
+                        <br>
+                        
+                         <h3>5: What does HTML stand for?</h3>
+                        <input type="radio" name="q5" value="a" >a: Home page Tab Markup Language
+                        <br>
+                        <input type="radio" name="q5" value="b">b: Hyperlinks and Text Markup Language
+                        <br>
+                        <input type="radio" name="q5" value="c">c: Hyper Text Markup Language
+                        <br>
+                        <input type="radio" name="q5" value="d">d: Hyperlink Table Must Language
+                        <br><br>
+                        <center>
+                        <input type="submit" id="but" value="Submit Answer">
+                        </center>
+                    </form>
+                
+                <footer>
+                        <hr id="hr">
+                        <p>&copy; 2018 CopyRight: Quiz System made by Muhammad Salman Asif</p>
+                    </footer>
+            </section>
+        </div>
+        <script type="text/javascript">
+            function abc(){
+                var total=5;
+                var score=0;
+                var q1=document.forms["quiz"]["q1"].value;
+                var q2=document.forms["quiz"]["q2"].value;
+                var q3=document.forms["quiz"]["q3"].value;
+                var q4=document.forms["quiz"]["q4"].value;
+                var q5=document.forms["quiz"]["q5"].value;
+                
+                for(i=1;i<=total;i++){
+                    if(eval("q"+i)==null || eval("q"+i)=="" )
+                        alert("you missed the question no "+i);
+                }
+                
+                var ans=["d","d","b","a","c"];
+                   for(i=1;i<=total;i++){
+                    if(eval("q"+i)==ans[i-1])
+                        score++;
+                }
+                var res=document.getElementById("result");
+                res.innerHTML="Your Score "+score+" out of 5";
+                return false;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Object with html</title>
+    </head>
+    <body>
+        <span>Number no 1: <input type="text" id="no1"></span><br>
+        <span>Number no 2: <input type="text" id="no2"></span><br>
+        <span>Result: <input type="text" id="res"></span><br>
+        <input type="button" id="bt" onclick="myfun()" value="show"><br>
+        <script type="text/javascript">
+            function myfun(){
+                var cal={
+                    num1:parseInt(document.getElementById("no1").value),
+                    num2:parseInt(document.getElementById("no2").value),
+                    result:function(){
+                    return (this.num1+this.num2);
+                    }
+                };
+            
+                document.getElementById("res").value=cal.result();
+            }
+        </script>
+    </body>
+</html>

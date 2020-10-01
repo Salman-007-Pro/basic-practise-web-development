@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Mouse Events with html
+        </title>
+    </head>
+    <body>
+        <input type="text" placeholder="copy here" oncopy="fun1()">
+        <input type="text" placeholder="cut here" oncut="fun2()">
+        <input type="text" placeholder="paste here" onpaste="fun3()"><br>
+        <p id="abc"></p>
+        <script type="text/javascript">
+            function fun1(){
+               
+                document.getElementById("abc").innerHTML="The Clipboard events has been occurs";
+            }
+            function fun2(){
+                document.getElementById("abc").innerHTML="The Clipboard events has been occurs";
+            }
+            function fun3(){
+                document.getElementById("abc").innerHTML="The Clipboard events has been occurs";
+            }
+        </script>
+    </body>
+</html>

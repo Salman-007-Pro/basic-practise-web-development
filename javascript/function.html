@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head><title>Function with javascript</title></head>
+    <body>
+        <h1>This is a FUNCTION</h1>
+        <script type="text/javascript">
+            var x=prompt("Enter the number of subject");
+            x=parseInt(x);
+            var a=new Array();
+            var sum=0;
+            for(var i=0;i<x;i++)
+                {
+                    a[i]=prompt("Enter the marke of subject "+(i+1));
+                    a[i]=parseInt(a[i]);
+                    sum+=a[i];
+                }
+            var i:int=23;
+            var b=x*100;
+            alert(b);
+            alert(sum);
+            function percentage(a1,b1){
+                return (a1/b1)*100;
+            }
+            var per=percentage(sum,b);
+            var per=per.toFixed(2);
+            alert(per+"%");
+            
+            document.write(per+"%");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Form event</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function abc(){
+               // var a=document.getElementById("abc").value;
+            //    document.getElementById("ab1").innerHTML="your search text: "+a;
+                alert("form has been submit")
+            }
+        </script>
+        <form onsubmit="abc()">
+        <input type="text" placeholder="enter the some text">
+        <input type="reset" value="reset">
+        <input type="submit">
+        </form>
+        <p id="ab1"></p>
+    </body>
+</html>

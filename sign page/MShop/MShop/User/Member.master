@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Member.master.cs" Inherits="User_Member" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="USER.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1275px;
+        }
+        .style2
+        {
+            width: 161px;
+            font-weight: 700;
+            color: #FFFFFF;
+            font-size: x-large;
+            font-family: "Eras Bold ITC";
+        }
+        .style3
+        {
+            width: 264px;
+        }
+        .style4
+        {
+            width: 466px;
+        }
+        .style6
+        {
+            width: 257px;
+            margin-left: 0px;
+        }
+        .style8
+        {
+            width: 100%;
+            height: 37px;
+        }
+        .style10
+        {
+            width: 257px;
+        }
+        .style11
+        {
+            width: 11px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="headd">
+        <table class="style1">
+            <tr>
+                <td class="style3">
+                    &nbsp;</td>
+                <td class="style2">
+                    Mobile Shop</td>
+                <td class="style4">
+                    <asp:TextBox ID="TextBox1" runat="server" BorderColor="#339966" 
+                        BorderStyle="Solid" BorderWidth="1px" Height="24px" Width="367px"></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" CssClass="btn" Height="28px" 
+                        Text="Search" onclick="Button1_Click" BorderColor="White" 
+                        BorderStyle="Solid" BorderWidth="1px" CausesValidation="False" />
+                </td>
+                <td class="style11">
+                    &nbsp;</td>
+                <td>
+                    <table class="style6">
+                        <tr>
+                            <td class="style10">
+                                <asp:Label ID="lblname" runat="server" ForeColor="White"></asp:Label>
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                <asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton2_Click" 
+                                    PostBackUrl="~/Default.aspx" CausesValidation="False" CssClass="mnulnk" 
+                                    ForeColor="White">LogOut</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    
+    <div id="mnu">
+        <table class="style8" style="border: thin solid #FFFFFF">
+            <tr>
+                <td class="mnulnk">
+                    <asp:LinkButton ID="LinkButton3" runat="server" CssClass="mnulnk" 
+                        PostBackUrl="~/User/Default.aspx" CausesValidation="False">Home</asp:LinkButton>
+                </td>
+                <td class="mnulnk">
+                    <asp:LinkButton ID="LinkButton4" runat="server" CssClass="mnulnk" 
+                        PostBackUrl="~/User/MyAccount.aspx" CausesValidation="False">My Account</asp:LinkButton>
+                </td>
+                <td class="mnulnk">
+                    <asp:LinkButton ID="LinkButton5" runat="server" CssClass="mnulnk" 
+                        PostBackUrl="~/User/MyOrder.aspx" CausesValidation="False">My Order</asp:LinkButton>
+                </td>
+                <td class="mnulnk">
+                    <asp:LinkButton ID="LinkButton6" runat="server" CssClass="mnulnk" 
+                        PostBackUrl="~/User/MyPayment.aspx" CausesValidation="False">My Payment</asp:LinkButton>
+                </td>
+                <td class="mnulnk">
+                                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="mnulnk" 
+                                    PostBackUrl="~/User/MyCart.aspx" CausesValidation="False">My Cart</asp:LinkButton>
+                            </td>
+                <td class="mnulnk">
+                    <asp:LinkButton ID="LinkButton7" runat="server" CssClass="mnulnk" 
+                        PostBackUrl="~/User/ChangePass.aspx" CausesValidation="False">ChangePassword</asp:LinkButton>
+                </td>
+            </tr>
+        </table>
+    </div></div>
+    <div id="main">
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="foot">All Rights Reserved @online Mobile Shop</div>
+    </form>
+</body>
+</html>

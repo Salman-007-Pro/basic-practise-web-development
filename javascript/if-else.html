@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>if-else with javascript</title>
+    </head>
+    <body>
+        <input type="text" id="text" placeholder="enter your language">
+        <input type="button" id="bt" value="Check"><br>
+        <h2>Result: </h2>
+        <p id="p"></p>
+        <script type="text/javascript">
+            document.getElementById("bt").onclick=function(){
+                var x=document.getElementById("text").value;
+                x=x.toLowerCase();
+                var y=prompt("Enter your favourite language:");
+                y=y.toLowerCase();
+                if(x==y){
+                    document.getElementById("p").innerHTML="Yes! it is ture";    
+                }
+                else{
+                    document.getElementById("p").innerHTML="Yes! it is false";
+                }
+            }
+        </script>
+    </body>
+</html>

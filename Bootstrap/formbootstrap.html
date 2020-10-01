@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Collapse with panel and accordion</title>
+        <linK href="css/bootstrap-grid.min.css" rel="stylesheet"/>
+        <linK href="css/bootstrap-reboot.css" rel="stylesheet"/>
+        
+        <!--<linK src="js/bootstrap.js"/>
+        <linK src="js/jquery.min.js"/>
+        <link src="js/bootstrap.bundle.min.js"/>-->
+        <linK href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+          
+        </style>
+    </head>
+    <body>
+        <div class="page-header">
+            <h1>Bootstrap Form</h1>
+        </div>
+      <div class="container">
+          <form>
+              <div class="form-group">
+                  <lable for="name">Name:</lable>
+                  <input type="text" id="name" class="form-control">
+              </div>
+              <div class="form-group">
+                  <lable for="Email">Email:</lable>
+                  <input type="email" id="email" class="form-control">
+              </div>
+              <div class="form-group">
+                  <lable for="remember">Remember:</lable>
+                  <input type="checkbox" id="check">
+              </div>
+              <button class="btn btn-primary">Submit</button>
+          </form>
+          <br>
+          <form class="form-inline">
+              <div class="form-group">
+                  <lable for="name">Name:</lable>
+                  <input type="text" id="name" class="form-control">
+              </div>
+              <div class="form-group">
+                  <lable for="Email">Email:</lable>
+                  <input type="email" id="email" class="form-control">
+              </div>
+              <div class="form-group">
+                  <lable for="remember">Remember:</lable>
+                  <input type="checkbox" id="check">
+              </div>
+              <button class="btn btn-primary">Submit</button>
+          </form>
+          
+          <div class="page-header">
+              <h1>Form-Horizontal</h1>
+          </div>
+          <form class="form-horizontal">
+              <div class="form-group row">
+                  <label for="name" class="col-md-2 control-label" >Name:</label>
+                  <div class="col-md-8">
+                  <input type="text" id="name" class="form-control">
+                  </div>
+                  
+              </div>
+              <div class="form-group row">
+                  <label for="Email" class="col-md-2 control-label">Email:</label>
+                  <div class="col-md-8">
+                  <input type="email" id="email" class="form-control ">
+                  </div>
+              </div>
+              <div class="form-group row">
+                
+                  <label for="remember" class="col-md-offset-2 col-md-8">Remember: <input type="checkbox" id="check"></label>
+              </div>
+            
+              <div class="form-group">
+                <div class="col-md-8 col-md-offset-2">
+                  <button class="btn btn-success btn-block">Submit</button>
+                  </div>
+              </div>
+          </form>
+          <br>
+           <div class="page-header">
+              <h1>Form-Horizontal with more on</h1>
+          </div>
+          
+          <form class="form-horizontal">
+              
+              <div class="form-group row">
+                  <label for="name" class="col-md-2 control-label" >Name:</label>
+                  <div class="col-md-8">
+                  <input type="text" id="name" class="form-control">
+                  </div>
+                  
+              </div>
+              
+              <div class="form-group row">
+                  <label for="password" class="col-md-2 control-label">Password:</label>
+                  <div class="col-md-8">
+                  <input type="password" id="password" class="form-control ">
+                  </div>
+              </div>
+              
+              <div class="form-group row">
+                  <label for="Email" class="col-md-2 control-label">Email:</label>
+                  <div class="col-md-8">
+                  <input type="email" id="email" class="form-control ">
+                  </div>
+              </div>
+              
+              <div class="form-group row">
+                  <label for="comment" class="col-md-2 control-label">Comment:</label>
+                  <div class="col-md-8">
+                  <textarea class="form-control" id="comment"></textarea>
+                  </div>
+              </div>
+              
+              <div class="form-group row">
+                  <label for="gender" class="col-md-2 control-label">Gender:</label>
+                  <div class="col-md-8">
+                    <div class="radio">
+                        <label><input type="radio" name="gender">Male</label>
+                      </div>
+                   <div class="radio">
+                        <label><input type="radio" name="gender">Female</label>
+                      </div>
+                  </div>
+              </div>
+              
+              
+              <div class="form-group row">
+                  <label for="gender" class="col-md-2 control-label">Occupation:</label>
+                  <div class="col-md-8">
+                    
+                        <label class="radio-inline"><input type="radio" name="oc">Owner</label>
+                      
+                   
+                        <label class="radio-inline"><input type="radio" name="oc">Employee</label>
+                      
+                  </div>
+              </div>
+              
+              <div class="form-group row">
+                  <label for="Skill" class="col-md-2 control-label">Skill:</label>
+                  <div class="col-md-8">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="skill">Java</label>
+                      </div>
+                   <div class="checkbox">
+                        <label><input type="checkbox" name="skill">Javascript</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" name="skill">Php</label>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" name="skill">C</label>
+                      </div>
+                  </div>
+              </div>
+              
+               <div class="form-group row">
+                  <label for="gender" class="col-md-2 control-label">Shifts:</label>
+                  <div class="col-md-8">
+                    
+                        <label class="checkbox-inline"><input type="checkbox" name="sh">Night</label>
+                      
+                   
+                        <label class="checkbox-inline"><input type="checkbox" name="sh">Morning</label>
+                      <label class="checkbox-inline"><input type="checkbox" name="sh">Evening</label>
+                      
+                  </div>
+              </div>
+              
+              <div class="form-group row">
+                  <label for="gender" class="col-md-2 control-label">Country:</label>
+                  <div class="col-md-8">
+                    
+                       <select class="form-control">
+                           <option>Pakistan</option>
+                           <option>India</option>
+                           <option>Iran</option>
+                           <option>Iraq</option>
+                           <option>American</option>
+                           <option>Turkey</option>
+                           <option>England</option>
+                           <option>Caneda</option>
+                      </select>
+                      
+                  </div>
+              </div>
+              
+              <div class="form-group row">
+                  <label for="gender" class="col-md-2 control-label">Hobby:</label>
+                  <div class="col-md-8">
+                    
+                       <select multiple class="form-control">
+                           <option>Football</option>
+                           <option>Cricket</option>
+                           <option>baseball</option>
+                           <option>basketball</option>
+                           <option>Chess</option>
+                           <option>Ai game</option>
+                      </select>
+                      
+                  </div>
+              </div>
+              
+              <div class="form-group row">
+                  <label for="remember" class="col-md-offset-2 col-md-8">Remember: <input type="checkbox" id="check"></label>
+              </div>
+            
+              <div class="form-group">
+                <div class="col-md-8 col-md-offset-2">
+                  <button class="btn btn-success btn-block">Submit</button>
+                  </div>
+              </div>
+          </form>
+          <br>
+          <div class="page-header">
+              <h1>Form with warning</h1>
+          </div>
+          <form>
+              <div class="form-group has-error has-feedback">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" class="form-control">
+                  <span class="glyphicon glyphicon-remove form-control-feedback "></span>
+              </div>
+               <div class="form-group has-success has-feedback">
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" class="form-control ">
+                  <span class="glyphicon glyphicon-check form-control-feedback "></span>
+              </div>
+              
+              <div class="form-group has-warning has-feedback">
+                  <label for="Email">Email:</label>
+                  
+                  <input type="email" id="email" class="form-control">
+                 <span class="glyphicon glyphicon-warning-sign form-control-feedback "></span>
+                  <span class="help-block">Here input email</span>
+              </div>
+              
+              <div class="form-group ">
+                  <label for="comment">Comment:</label>
+                  
+                  <textarea class="form-control" id="comment"></textarea>
+            <span class="glyphicon glyphicon-remove form-control-feedback "></span>
+              </div>
+              <div class="form-group">
+                  <label for="remember">Remember:</label>
+                  <input type="checkbox" id="check">
+              </div>
+              <button class="btn btn-primary btn-block">Submit</button>
+          </form>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

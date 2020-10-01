@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Array2 with object
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var student=["Salman","Ali","Absar","Minhaj"];
+            var city=["Karachi","Lahore","Peshawar","Sindh"];
+            var combine=student.concat(city);
+            for(var f in combine)
+                document.write(combine[f]+"<br>");
+            document.write(student.reverse()+"<br>");
+            document.write(student.join()+"<br>");
+            student.pop()
+            document.write(student+"<br>");
+            student.push("Atif");
+            document.write(student+"<br>");
+            student.shift();
+            document.write(student+"<br>");
+            student.unshift("Muneeb")
+            document.write(student+"<br>");
+            document.write(student.lastIndexOf("Atif")+"<br>");
+            document.write(student.splice(1,0,"Salman")+"<br>");
+            document.write(student.sort()+"<br>");
+            document.write(student.slice(3)+"<br>");
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My name is Salman</title>
+        <style type="text/css">
+            .circle{
+                margin: 10px;
+                border-radius: 100px;
+                float:left;
+                width: 200px;
+                height: 200px;
+            }
+            .circle:hover{
+                cursor: pointer;
+            }
+            #red{
+                background-color: red;
+            }
+            #blue{
+                background-color: blue;
+            }
+            #yellow{
+                background-color: yellow;
+            }
+            #orange{
+                background-color: orange;
+            }
+            #black{
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle" id="red"></div>
+        <div class="circle" id="blue"></div>
+        <div class="circle" id="yellow"></div>
+        <div class="circle" id="orange"></div>
+        <div class="circle" id="black"></div>
+    </body>
+    <script type="text/javascript">
+        document.getElementById("red").onclick=function(){
+            document.getElementById("red").style.display="none";
+        }
+         document.getElementById("blue").onclick=function(){
+            document.getElementById("blue").style.display="none";
+        }
+          document.getElementById("yellow").onclick=function(){
+            document.getElementById("yellow").style.display="none";
+        }
+           document.getElementById("orange").onclick=function(){
+            document.getElementById("orange").style.display="none";
+        }
+            document.getElementById("black").onclick=function(){
+            document.getElementById("black").style.display="none";
+        }
+    </script>
+        
+</html>

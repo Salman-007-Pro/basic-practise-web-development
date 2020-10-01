@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Location with html
+        </title>
+    </head>
+    <body>
+        <button onclick="abc()">click go to screen html</button>
+        <button onclick="abc1()">click go to reload</button>
+        <button onclick="abc2()">click go to replace</button><br>
+        <script type="text/javascript">
+            window.location.search="salman";
+            location.hash="part5";
+            document.write(location.hash+"<br>");
+            document.write(location.host+"<br>");
+            document.write(location.hostname+"<br>");
+            document.write(location.href+"<br>");
+            document.write(location.origin+"<br>");
+            document.write(location.pathname+"<br>");
+            document.write(location.part+"<br>");
+            document.write(location.protocal+"<br>");
+            document.write(location.search+"<br>");
+            function abc(){
+                location.assign("screenobject.html");
+            }
+            function abc1(){
+                location.reload();
+            }
+            function abc2(){
+                location.replace("screenobject.html");
+            }
+        </script>
+    </body>
+</html>

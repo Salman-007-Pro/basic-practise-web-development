@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>My name is Muhammd Salman Asif</title>
+    </head>
+    <body>
+        <button onclick="opened()">Click here to open</button>
+        <button onclick="closed()">Click here to close</button>
+        <p id="abc"></p>
+        <script type="text/javascript">
+            function opened(){
+                var s=window.open(" ","_blank","height=300px,width=300px");
+                s.document.getElementById("abc").innerHTML="asdasd";
+                s.opener.getElementById("abc").innerHTML="Sakman";
+            }
+        </script>
+    </body>
+</html>

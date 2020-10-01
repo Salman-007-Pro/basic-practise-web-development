@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Guess game</title>
+    </head>
+    <body>
+        <h1>Guess game</h1>
+        <input type="text" id="text">
+        <input type="button" value="guess" id="bt">
+        <script type="text/javascript">
+            document.getElementById("bt").onclick=myfunction;
+            function myfunction(){
+                var x=Math.floor(Math.random()*6);
+                x=x+1;
+                var a=document.getElementById("text").value;
+                if(a==x)
+                    {
+                         alert("Yes! you got it...");
+                        
+                    }
+                else{
+                     alert("No, " + x);
+                }
+            }
+        </script>
+    </body>
+</html>

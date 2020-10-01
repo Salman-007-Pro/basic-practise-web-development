@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Reaction tester app
+        </title>
+        <style type="text/css">
+            #ab{
+                background-color: red;
+                cursor: pointer;
+            }
+            #ab1{
+                user-select: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="ab2">Reaction Tester</h1>
+        <p id="ab1">Your time is click: <span id="time"></span></p>
+        <div id="ab" onclick="abc()"></div>
+        <script type="text/javascript">
+            var start=new Date().getTime();
+            function colorchanger(){
+                var str="0123456789ABCDEF";
+                var col="#"
+                for(i=0;i<6;i++){
+                    var a=Math.floor(Math.random()*16);
+                    col+=str[a];
+                }
+                return col;
+            }
+            function abc1(){
+                var a=document.getElementById("ab");
+                
+                a.style.backgroundColor=colorchanger();
+                a.style.width=((Math.random()*400)+50)+"px";
+                a.style.height=((Math.random()*400)+50)+"px";
+                a.style.marginLeft=((Math.random()*400)+50)+"px";
+                a.style.marginTop=((Math.random()*400)+50)+"px";
+                if(Math.random()>0.5)
+                    a.style.borderRadius="100px";
+                else
+                    a.style.borderRadius="0";
+                start=new Date().getTime();
+                document.getElementById("ab").style.display="block";
+            }
+            delay();
+            function delay(){
+                setTimeout(abc1,Math.random()*2000);
+            }
+            function abc(){
+                var end=new Date().getTime();
+                var diff=(end-start)/1000;
+                document.getElementById("ab").style.display="none";
+                delay();
+                document.getElementById("time").style.color=colorchanger();
+                document.getElementById("ab2").style.color=colorchanger();
+                document.getElementById("time").innerHTML=diff+" sec"
+            }
+        </script>
+    </body>
+</html>

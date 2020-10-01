@@ -1,0 +1,10 @@
+#box{
+            display: none;
+            
+        }
+        #box:hover{
+            cursor: pointer;
+        }
+#sp{
+    color:red;
+}

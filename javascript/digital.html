@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <style type="text/css">
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: cadetblue;
+            }
+            #container{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+            #large_clock{
+                font-family: monospace;
+                padding: 20px;
+                background-color:chocolate;
+                font-size: 60px;
+                border-radius: 30px;
+                box-shadow: 4px 3px 15px 2px black;
+            }
+            #large_clock span{
+                position: relative;
+                font-size: 30px;
+                bottom: 10px;
+                color: dodgerblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+                <div id="large_clock"></div>
+        </div>
+        <script type="text/javascript">
+            function showtime(){
+                var today=new Date();
+                var current_hour=today.getHours();
+                var current_min=today.getMinutes();
+                var current_sec=today.getSeconds();
+                var a_p="";
+                
+                if(current_hour<12)
+                    a_p="<span>AM<span>";
+                else
+                    a_p="<span>PM<span>";
+                if(current_hour==0)
+                    current_hour=12;
+                if(current_hour>12)
+                    current_hour=current_hour-12;
+                current_hour=check(current_hour);
+                current_min=check(current_min);
+                current_sec=check(current_sec);
+                function check(a){
+                    if(a<10)
+                        a="0"+a;
+                    return a;
+                }
+                document.getElementById("large_clock").innerHTML=current_hour+" : "+current_min+" : "+current_sec+ " "+a_p;
+            }
+            setInterval(showtime);
+        </script>
+    </body>
+</html>

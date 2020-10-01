@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Window with Object
+        </title>
+    </head>
+    <body>
+        <button onclick="myopen()">Click here to open</button>
+        <button onclick="movewin()">Click here to move</button>
+        <script type="text/javascript">
+            var mywin;
+            function myopen(){
+                mywin=window.open("","mywin","height=300px,width=300px");
+                mywin.document.write(mywin.name);
+            }
+            function movewin(){
+               // alert("this asd");
+                mywin.moveTo(300,150);
+                mywin.focus();
+            }
+        </script>
+    </body>
+</html>

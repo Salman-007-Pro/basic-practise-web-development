@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Setinterval with in html
+        </title>
+        <style type="text/css">
+            a{
+                color: red;
+                text-decoration: none;
+            }
+            a:hover{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="abc"></p>
+        <p id="abc1"></p>
+        <button onclick="update()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <script type="text/javascript">
+            var a;
+            var c=5;
+            var t=setInterval(new_time,1000);
+            function update(){
+                a=setInterval(start,1000);
+            }
+            function start(){
+                var b=new Date();
+                document.getElementById("abc").innerHTML=b.toLocaleTimeString();
+            }
+            function new_time(){
+                document.getElementById("abc1").innerHTML=c;
+                c--;
+                if(c==0)
+                    {
+                        clearInterval(t);
+                        document.getElementById("abc1").innerHTML="<a href='https://www.google.com/' target='_blank'>Click here to download</a>";
+                    }
+            }
+            function stop(){
+                clearInterval(a);
+            }
+        </script>
+    </body>
+</html>

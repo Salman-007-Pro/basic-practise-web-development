@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <title>Practise no 1</title>
+        <style>
+            /*
+            COLORS:
+
+            Light green: #7ed56f
+            Medium green: #55c57a
+            Dark green: #28b485
+
+            */
+            *,
+            *::before,
+            *::after{
+                margin:0;
+                padding:0;
+                box-sizing: inherit;
+            }
+            html{
+                font-size: 62.5%;
+            }
+            body{
+                font-family: "lato",sans-serif;
+                font-weight: 400;
+                line-height: 1.7;
+                /*font-size:16px;*/
+                padding: 3rem;
+                color:#777;
+                box-sizing: border-box;
+            }
+            .header{
+                height: 95vh;
+                background-image: linear-gradient(to right bottom,
+                rgba(126, 213, 111, 0.8),
+                rgba(85, 197, 122, 0.8),
+                rgba(40, 180, 133, 0.8)),url(img/hero.jpg);
+                background-position: top;
+                background-size: cover;
+                position:relative;
+                clip-path: polygon(0 0 , 100% 0 ,100% 75vh,0 100%);
+            }
+            .logo-box{
+                position: absolute;
+                top:4rem;
+                left:4rem;
+            }
+            .logo-img{
+                height: 3.5rem;
+            }
+            .header-text{
+                position: absolute;
+                top:36%;
+                left: 50%;
+                transform: translate(-50%,-36%);
+                text-align: center;
+            }
+            .text-header{
+                text-transform: uppercase;
+                color:#fff;
+                margin-bottom: 6rem;
+            }
+            .text-header-primary{
+                display: block;
+                font-size:6rem;
+                letter-spacing: 3.5rem;
+                font-weight: 400;
+                animation: moveInLeft 1.2s ease-out;
+
+            }
+            .text-header-sub{
+                display: block;
+                font-size:2rem;
+                letter-spacing: 1.75rem;
+                font-weight: 700;
+                animation: moveInRight 1.2s ease-out;
+            }
+            @keyframes moveInLeft{
+                0%{
+                    opacity: 0;
+                    transform: translateX(-10rem);
+                }
+                80%{
+                    transform: translateX(1rem);
+                }
+                100%{
+                    opacity:1;
+                }
+            }
+            @keyframes moveInRight{
+                0%{
+                    opacity: 0;
+                    transform: translateX(10rem);
+                }
+                80%{
+                    transform: translateX(-1rem);
+                }
+                100%{
+                    opacity:1;
+                }
+            }
+            @keyframes moveInBottom{
+                0%{
+                    opacity: 0;
+                    transform: translatey(3rem);
+                }
+                100%{
+                    opacity:1;
+                }
+            }
+            .btn:link,
+            .btn:visited{
+                display: inline-block;
+                padding: 1.6rem 4rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                border-radius: 20rem;
+                transition: all 0.2s;
+                position: relative;
+                font-size:1.6rem;
+                cursor: pointer;
+            }
+            .btn-white{
+                color:#777;
+                background-color: #fff;
+            }
+            .btn:hover{
+                transform: translateY(-0.3rem);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            }
+            .btn:active{
+                transform: translateY(-0.1rem);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            }
+            .btn::after{
+                content: "";
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                position: absolute;
+                top:0;
+                left: 0;
+                border-radius: 20rem;
+                transition: all 0.5s
+            }
+            .btn-white::after{
+                background-color:#fff;
+            }
+            .btn:hover::after{
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+            .btn-animation{
+                animation: moveInBottom 0.9s ease-out 0.8s;
+                animation-fill-mode: backwards;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo-box">
+                <img src="img/logo-white.png" alt="Logo-img" class="logo-img">
+            </div>
+            <div class="header-text">
+                <h1 class="text-header">
+                    <span class="text-header-primary">outdoors</span>
+                    <span class="text-header-sub">is where life happens</span>
+                </h1>
+                <a href="#" class="btn btn-white btn-animation">Discover our tours</a>
+            </div>
+        </header>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Java script with change web content</title>
+    </head>
+    <body>
+        <p id="text1">My name is Muhammad Salman Asif</p>
+        <button onclick="myfunction()">Change it</button>
+        <p id="text2">I am here to practise a javascript like a pro and a noob</p>
+        <button onclick="myfunction1()">Change it</button>
+        <p id="text3">My teacher is teach a javascript like a pro</p>
+        <button onclick="myfunction2()">Change it</button>
+    </body>
+    <script type="text/javascript">
+        function myfunction(){
+            document.getElementById("text1").innerHTML= "Yes ! "+document.getElementById("text1").innerHTML + " its is me";
+        }
+        function myfunction1(){
+            document.getElementById("text2").innerHTML= "Yes ! "+document.getElementById("text2").innerHTML + " its is me";
+        }
+        function myfunction2(){
+            document.getElementById("text3").innerHTML= "Yes ! "+document.getElementById("text3").innerHTML + " its is me";
+        }
+    </script>
+</html>

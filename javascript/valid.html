@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title>valid</title>
+        <style type="text/css">
+            .a{
+                user-select: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Validation phone</h1>
+        <input type='text' onclick="abc1(this);" class="a">
+        <p id="1"></p>
+        <h1>Validation Cnic</h1>
+        <input type='text' onclick="abc2(this);"class="a">
+        <p id="2"></p>
+        <h1>Validation Email</h1>
+        <input type='text' onclick="abc3(this);"class="a">
+        <p id="3"></p>
+        <script type="text/javascript">
+            function abc1(f){
+                var a=/^[0-9]{4}-[0-9]{7}$/;
+                var b=a.exec(f.value);
+                if(b){
+                    document.getElementById("1").innerHTML="The Valid phone";
+                }
+                else
+                    document.getElementById("1").innerHTML="The Invalid phone";
+            }
+            function abc2(f){
+                var a=/^[0-9]{5}-[0-9]{7}-[0-9]{1}$/;
+                var b=a.exec(f.value);
+                if(b){
+                    document.getElementById("2").innerHTML="The Valid Cnic";
+                }
+                else
+                    document.getElementById("2").innerHTML="The Invalid Cnic";
+            }
+            function abc3(f){
+                var a=/^[._a-zA-z0-9-]{5,20}@[0-9a-zA-z]{1,6}\.([a-z]{2,3})+$/;
+                var b=a.test(f.value);
+                console.log(b);
+                if(b){
+                    document.getElementById("3").innerHTML="The Valid Email";
+                }
+                else
+                    document.getElementById("3").innerHTML="The Invalid Email";
+            }
+        </script>
+    </body>
+</html>

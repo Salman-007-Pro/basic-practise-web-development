@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head><title>Loop in javascript</title></head>
+    <style type="text/css">
+        .box{
+            width: 150px;
+            float:left;
+            margin: 10px;
+            background-color: red;
+        }
+    </style>
+    <body>
+        <div class="box" id="e">
+        </div>
+        <script type="text/javascript">
+            var x=["Salman","Atif","Absar","Minhaj"];
+            var tweets="";
+            x.push("Sheila","salman");
+            for(var i =0 ;i<x.length;i++){
+                tweets= tweets + "<p>"+ x[i] + "</p>";
+            }
+            document.getElementById("e").innerHTML=tweets;
+        </script>
+    </body>
+</html>

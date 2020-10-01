@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Collapse with panel and accordion</title>
+        <linK href="css/bootstrap-grid.min.css" rel="stylesheet"/>
+        <linK href="css/bootstrap-reboot.css" rel="stylesheet"/>
+        
+        <!--<linK src="js/bootstrap.js"/>
+        <linK src="js/jquery.min.js"/>
+        <link src="js/bootstrap.bundle.min.js"/>-->
+        <linK href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        
+        <div class="container-fluid">
+            <div class="panel-group">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <a href="#collapse1" data-toggle="collapse">Panel with collapse</a>
+                        </div>
+                    </div>
+                     <div class="panel-collapse collapse" id="collapse1">
+                        
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-danger">Username</li>
+                                <li class="list-group-item">Roll no</li>
+                                <li class="list-group-item">Section</li>
+                            </ul>
+                
+                        </div>
+                </div>
+            </div>
+            
+            
+            
+            <!---Accordion----->
+            <div class="panel-group" id="accordion1">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#a1" data-toggle="collapse" data-parent="#accordion1">A1 with body in accordion1</a>
+                        </h4>
+                    </div>
+                  <div class="panel-collapse collapse" id="a1">
+                        <div class="panel-body">This is a A1 body</div>
+                    </div>
+                </div>
+                
+                
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#a1" data-toggle="collapse" data-parent="#accordion1">A2 with body in accordion1</a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="a2">
+                        <div class="panel-body">This is a A2 body</div>
+                    </div>
+                </div>
+                
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#a3" data-toggle="collapse" data-parent="#accordion1">A3 with body in accordion1</a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="a3">
+                        <div class="panel-body">This is a A3 body</div>
+                    </div>
+                </div>
+                  
+            </div>
+        </div>
+        
+        
+        
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
+    

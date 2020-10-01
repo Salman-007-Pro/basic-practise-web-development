@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            History with Object
+        </title>
+    </head>
+    <body>
+        <button onclick="forward()">go to forward</button>
+        <button onclick="back()">go to back</button><br>
+        <p id="abc"></p>
+        <script type="text/javascript">
+            console.log(window.history.length<);
+            function forward(){
+                history.forward();
+            }
+            function back(){
+                history.back();   
+            }
+        </script>
+    </body>
+</html>

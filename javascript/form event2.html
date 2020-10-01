@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Form event onchange</title>
+    </head>
+    <body>
+        <select onchange="abc(this)" id="ab1">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+        <input type="text" id="ab2" onclick="abc1(this)">
+        <p id="ab"></p>
+        <script type="text/javascript">
+            function abc(f){
+                //var a=document.getElementById("ab1").value
+                var a=f.value;
+                document.getElementById("ab").innerHTML=a;
+            }
+            function abc1(f){
+                var a=f.value;
+                document.getElementById("ab").innerHTML=a;
+            }
+        </script>
+    </body>
+</html>

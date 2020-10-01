@@ -1,0 +1,24 @@
+<!doctpye html>
+<html>
+    <head>
+        <title>
+            Window object
+        </title>
+    </head>
+    <body>
+        <button onclick="openwin()">Click here to open</button>
+        <button onclick="resize()">Click here to open</button>
+        <script type="text/javascript">
+            var mywin;
+            function openwin(){
+                mywin=window.open("","mywin","height=300px,width=300px");
+                mywin.document.write("This is a new Window");
+            }
+            function resize(){
+                mywin.resizeTo(600,800);
+                mywin.focus();
+            }
+            
+        </script>
+    </body>
+</html>

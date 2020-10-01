@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Variable with javascript</title>
+    </head>
+    <body>
+        <input type="text" id="text" placeholder="Enter your text">
+        <input type="submit" id="bt">
+        <p id="p">My name is Salman</p>
+        <script type="text/javascript">
+            document.getElementById("bt").onclick=function(){
+                var x=document.getElementById("text").value;
+                document.getElementById("p").innerHTML=x;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Frame event with html</title>
+    </head>
+    <body onhashchange="abc2()">
+        <a href="clipboard.html" >click here</a>
+        <p id="abc"></p>
+        <button onclick="abc1()">Click here</button>
+        <script type="text/javascript">
+            var a
+            function abc(){
+                return "Confirm plz"
+            }
+            function abc1(){
+                a= location.hash="Salman";
+            }
+            function abc2(){
+                alert("Hash has been Change");
+                document.getElementById("abc").innerHTML=a;
+            }
+            //document.write(navigator.cookieEnabled);
+        </script>
+    </body>
+</html>

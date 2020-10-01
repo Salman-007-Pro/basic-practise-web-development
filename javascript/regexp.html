@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            my name is Muhammad Salman Asif
+        </title>
+        <style>
+            textarea{
+                resize: none;
+                height: 250px;
+                width: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="ab"></p>
+        <p id="ab2"></p>
+        <textarea row="40" col="40" id='ab1'></textarea><br>
+        <input type='text' id="x">
+        <button onclick="abc1()">search the word</button><br>
+        <button onclick="abc()">Submit</button>
+        <script>
+            function abc(){
+                var str=document.getElementById("ab1").value;
+                document.getElementById("ab").innerHTML=str;
+            }
+            function abc1(){
+                var a=document.getElementById("ab").innerHTML;
+                var str=document.getElementById("x").value;
+                var sh=new RegExp(str,"ig");
+                var path=/salman/gi
+                var res=sh.exec(a);
+                document.getElementById("ab2").innerHTML=res;
+            }
+        </script>
+    </body>
+</html>

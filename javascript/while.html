@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>While loop in javascript</title>
+        <style type="text/css">
+            #text{
+                text-align: center;
+                width: 350px;
+                height: 250px;
+                margin: 10px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="text"></div>
+    </body>
+    <script type="text/javascript">
+        var x=1;
+        var b="";
+        while(x<=6)
+            {
+                b=b+"<h"+x+">" + "My name is salman" + "</h"+x+">";
+                x++
+            }
+        document.getElementById("text").innerHTML=b;
+    </script>
+</html>

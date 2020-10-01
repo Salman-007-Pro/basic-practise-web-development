@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            Navigator with Html
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.write(navigator.appCodeName+"<br>");
+            document.write(navigator.appName+"<br>");
+            document.write(navigator.appVersion+"<br>");
+            document.write(navigator.cookieEnabled+"<br>");
+            document.write(navigator.language+"<br>");
+            document.write(navigator.product+"<br>");
+            document.write(navigator.online+"<br>");
+            document.write(navigator.platform+"<br>");
+            document.write(navigator.userAgent+"<br>");
+            function myfunction(){
+                var x=navigator.javaEnabled();
+                document.write("<br>"+x);
+            }
+        </script>
+        <button onclick="myfunction()">click here</button>
+    </body>
+</html>

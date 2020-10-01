@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <title>form event with html
+        </title>
+    </head>
+    <body>
+        <input type ="text" id= "abc" onblur="abc()" onfocus="abc1()">
+        <script type ="text/javascript">
+            var a=document.getElementById("abc");
+            function abc(){
+                a.value=a.value.toUpperCase();
+            }
+            function abc1(){
+                a.value=a.value.toLowerCase();
+            }
+        </script>
+    </body>
+</html>
